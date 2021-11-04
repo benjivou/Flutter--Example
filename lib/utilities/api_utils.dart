@@ -6,11 +6,12 @@ import 'package:app/private/private_keys.dart';
 import 'package:country_codes/country_codes.dart';
 import 'package:http/http.dart' as http;
 
-// Open the connection to the Api
+/// Open the connection to the Api
 class ApiUtils {
   final endPointUrl = "newsapi.org";
   final client = http.Client();
 
+  /// Retrieve 20 news maximum about 'technology' written in the language of the os
   Future<List<News>> getNews() async {
     await CountryCodes.init();
     final Locale deviceLocale = CountryCodes.getDeviceLocale()!;
@@ -27,7 +28,3 @@ class ApiUtils {
     return news;
   }
 }
-
-
-
-
