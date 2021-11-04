@@ -2,6 +2,7 @@ import 'package:app/bloc/news_bloc/news_events.dart';
 import 'package:app/bloc/news_bloc/news_state.dart';
 import 'package:app/model/news.dart';
 import 'package:app/utilities/api_utils.dart';
+
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class NewsBloc extends Bloc<NewsEvents, NewsState> {
@@ -14,12 +15,12 @@ class NewsBloc extends Bloc<NewsEvents, NewsState> {
     if (event is InitNewsEvents) {
       yield InitNewsState();
       listOfNews = await ApiUtils().getNews();
-      yield NewNewsState(listOfNews);
+      yield RefreshListNewsState(listOfNews!);
     }
     if (event is RefreshNewsEvents) {
       yield LaunchRefreshState();
       listOfNews = await ApiUtils().getNews();
-      yield NewNewsState(listOfNews!);
+      yield RefreshListNewsState(listOfNews!);
     }
   }
 }

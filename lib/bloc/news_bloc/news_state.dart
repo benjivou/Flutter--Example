@@ -1,4 +1,5 @@
 import 'package:app/model/news.dart';
+
 import 'package:equatable/equatable.dart';
 
 abstract class NewsState extends Equatable {
@@ -13,7 +14,7 @@ class InitNewsState extends NewsState {}
 class LaunchRefreshState extends NewsState {}
 
 /// A new List of news is available
-class NewNewsState extends NewsState {
-  List<News>? listOfNews;
-  NewNewsState(this.listOfNews);
+class RefreshListNewsState extends NewsState {
+  final List<News> listOfNews;
+  RefreshListNewsState(this.listOfNews);
 }

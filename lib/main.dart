@@ -1,6 +1,7 @@
 import 'package:app/bloc/news_bloc/news_bloc.dart';
 import 'package:app/screen/home_page.dart';
 import 'package:flutter/material.dart';
+
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
       },
       home: BlocProvider(
         create: (BuildContext context) => NewsBloc()..add(InitNewsEvents()),
-        child: HomePage(),
+        child: const HomePage(),
       ),
       localizationsDelegates: const [
         AppLocalizations.delegate,
