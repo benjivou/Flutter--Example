@@ -1,0 +1,7 @@
+{
+    "appTitle": "English News",
+    "@appTitle": {
+      "description": "the description"
+    },
+  "currentlyLoadingNews": "We are searching for your News, ... "
+}
