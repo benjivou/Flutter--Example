@@ -18,7 +18,7 @@ class ApiUtils {
     final queryParameters = {
       'country': deviceLocale.countryCode,
       'category': 'technology',
-      'apiKey': PrivateKeys.apiKey
+      'apiKey': PrivateKeys.apiKey // TODO Put the key here
     };
     final uri = Uri.https(endPointUrl, '/v2/top-headlines', queryParameters);
     final response = await client.get(uri);
