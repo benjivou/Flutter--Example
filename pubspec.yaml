@@ -1,5 +1,5 @@
 name: app
-description: A new Flutter project.
+description: It will display a list of the 20 most view technology news in your mother tongue
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
